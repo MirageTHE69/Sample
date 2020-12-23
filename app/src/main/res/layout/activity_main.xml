@@ -3,52 +3,52 @@
     android:layout_width="fill_parent"
     android:layout_height="match_parent">
 
-<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity"
-    >
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".MainActivity1"
+        >
 
 
-    <LinearLayout
-        android:layout_width="440dp"
-        android:layout_height="347dp"
-        android:background="@drawable/back"
-        android:orientation="vertical" >
+        <LinearLayout
+            android:layout_width="440dp"
+            android:layout_height="347dp"
+            android:background="@drawable/back"
+            android:orientation="vertical" >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="50dp"
+                android:text="Welcome"
+                android:textColor="@android:color/background_light"
+                android:textSize="40dp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/Bnt1"
+            android:layout_width="300dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
             android:layout_marginTop="50dp"
-            android:text="Welcome"
-            android:textColor="@android:color/background_light"
-            android:textSize="40dp"
-            android:textStyle="normal" />
+            android:background="@drawable/button"
+            android:text="Login"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/Bnt2"
+            android:layout_width="300dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button"
+            android:text="Register"
+            android:textColor="#fff" />
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/Bnt1"
-        android:layout_width="300dp"
-        android:layout_height="56dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/button"
-        android:text="Login"
-        android:textColor="#fff" />
-
-    <Button
-        android:id="@+id/Bnt2"
-        android:layout_width="300dp"
-        android:layout_height="56dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/button"
-        android:text="Register"
-        android:textColor="#fff" />
-
-</LinearLayout>
 </ScrollView>
