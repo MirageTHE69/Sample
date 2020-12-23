@@ -52,6 +52,7 @@
         android:id="@+id/Tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/forget"
         android:layout_gravity="end"
         android:layout_marginTop="10dp"
         android:layout_marginRight="40dp"
@@ -59,13 +60,14 @@
         android:textColor="#31274f" />
 
     <Button
+        android:id="@+id/Home1"
         android:layout_width="300dp"
         android:layout_height="56dp"
-        android:text="Sign In"
-        android:textColor="#fff"
-        android:background="@drawable/button"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button"
+        android:text="Sign In"
+        android:textColor="#fff" />
 
 
 

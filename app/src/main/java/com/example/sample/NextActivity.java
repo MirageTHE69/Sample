@@ -8,12 +8,21 @@ import android.view.View;
 import android.widget.TextView;
 
 public class NextActivity extends AppCompatActivity {
-    TextView tv,tv1;
+    TextView tv,tv1,tv2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_next);
+
+        tv2=findViewById(R.id.Home1);
+
+        tv2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Home_Page.class));
+            }
+        });
 
         tv1=findViewById(R.id.Login);
 
