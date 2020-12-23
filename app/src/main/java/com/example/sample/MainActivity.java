@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main1);
+        setContentView(R.layout.activity_main);
 
         Bnt1=findViewById(R.id.Bnt1);
         Bnt2=findViewById(R.id.Bnt2);

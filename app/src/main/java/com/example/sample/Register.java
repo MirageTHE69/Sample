@@ -19,7 +19,7 @@ TextView tv;
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),Home_Page.class));
+                startActivity(new Intent(getApplicationContext(),NextActivity.class));
             }
         });
         
