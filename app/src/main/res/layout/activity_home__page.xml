@@ -7,58 +7,70 @@
     tools:context=".Home_Page">
 
     <Button
+
         android:id="@+id/sanitize_home"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginTop="187dp"
         android:background="@drawable/sanitize_home"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="187dp" />
+        tools:layout_editor_absoluteX="28dp">
+
+    </Button>
 
     <Button
         android:id="@+id/clean_home"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="187dp"
         android:background="@drawable/clean_home"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="187dp" />
+        tools:layout_editor_absoluteX="242dp">
+
+    </Button>
+
 
     <Button
         android:id="@+id/sewage_home"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="420dp"
+        android:layout_marginEnd="276dp"
         android:background="@drawable/sewage_home"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="422dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+    </Button>
 
     <Button
         android:id="@+id/elec_home"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="422dp"
         android:background="@drawable/elec_home"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="422dp" />
+        tools:layout_editor_absoluteX="242dp">
+
+    </Button>
 
     <TextView
         android:id="@+id/Choose_Field"
-        android:layout_width="335dp"
-        android:layout_height="84dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
         android:background="@drawable/forget"
         android:gravity="center"
         android:text="Enter Your Choice You Want.."
         android:textColor="#31274f"
         android:textSize="25dp"
         android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="49dp">
+        tools:layout_editor_absoluteX="62dp">
 
     </TextView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
