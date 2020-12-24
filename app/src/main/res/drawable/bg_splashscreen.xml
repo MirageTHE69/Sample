@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@color/white">
+    <item android:drawable="#d966ff">
+
 
     </item>
 
     <item>
         <bitmap
+
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:src="@drawable/sanitize5" />
+            android:src="@drawable/sanitize" />
     </item>
 
 </layer-list>
