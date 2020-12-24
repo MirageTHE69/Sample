@@ -8,7 +8,7 @@
         <bitmap
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:src="@drawable/spalshlogo3" />
+            android:src="@drawable/sanitize5" />
     </item>
 
 </layer-list>
