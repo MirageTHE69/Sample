@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class Home_Page extends AppCompatActivity {
 
-    Button B1,B2,B3;
+    Button B1,B2,B3,B4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +40,15 @@ public class Home_Page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),Commimg_Soon.class));
+            }
+        });
+
+        B4=findViewById(R.id.sanitize_home);
+
+        B4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),sanitize.class));
             }
         });
 
