@@ -68,13 +68,13 @@
 
     <TextView
         android:id="@+id/Choose_Field"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="471dp"
+        android:layout_height="57dp"
         android:layout_marginTop="57dp"
-        android:background="@drawable/forget"
+        android:background="@drawable/button"
         android:gravity="center"
-        android:text="Enter Your Choice You Want.."
-        android:textColor="#31274f"
+        android:text="Enter Your Choice You Want"
+        android:textColor="#ffffff"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

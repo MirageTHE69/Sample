@@ -75,6 +75,7 @@
             android:textColor="#000" />
 
         <Button
+            android:id="@+id/Home2"
             android:layout_width="300dp"
             android:layout_height="56dp"
             android:layout_gravity="center"
