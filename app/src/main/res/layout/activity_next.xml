@@ -28,25 +28,27 @@
     </LinearLayout>
 
     <EditText
+        android:id="@+id/LogUser"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="User Name"
-        android:background="@drawable/forget"
-        android:textColor="#000"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="30dp"
-        android:layout_marginTop="20dp"/>
+        android:background="@drawable/forget"
+        android:hint="User Name"
+        android:textColor="#000" />
 
     <EditText
+        android:id="@+id/LogPass"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="Password"
-        android:background="@drawable/forget"
-        android:textColor="#000"
         android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
         android:layout_marginTop="15dp"
-        android:inputType="textPassword"/>
+        android:layout_marginRight="30dp"
+        android:background="@drawable/forget"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#000" />
 
     <TextView
         android:id="@+id/Tv1"
@@ -76,7 +78,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp">
+
         <TextView
+            android:id="@+id/Register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -87,7 +91,7 @@
         <TextView
             android:id="@+id/Login"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:text="Sign up"
             android:textColor="#31274f"
