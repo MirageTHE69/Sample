@@ -10,7 +10,7 @@
 
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:src="@drawable/sanitize" />
+            android:src="@drawable/icon_material_protection" />
     </item>
 
 </layer-list>
