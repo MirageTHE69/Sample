@@ -33,15 +33,6 @@ public class NextActivity extends AppCompatActivity {
         Signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String namestr = User_Name.getText().toString();
-                String Passwordstr = Password.getText().toString();
-
-                ContentValues values = new ContentValues();
-                values.put("User_Name",namestr);
-                values.put("Password",Passwordstr);
-                Login_Db.insert("Login",null, values);
-                Toast.makeText(getApplicationContext(),"Data Inserted into database", Toast.LENGTH_SHORT).show();
-
                 startActivity(new Intent(getApplicationContext(),Home_Page.class));
             }
         });
@@ -61,9 +52,8 @@ public class NextActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),Forgot.class);
 
                 startActivity(intent);
-
-
             }
         });
+
     }
 }
