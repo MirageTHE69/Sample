@@ -23,6 +23,16 @@
 
     </LinearLayout>
 
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="OTP SEND ON YOUR REGISTERED PHONE NO AND EMAIL-ID."
+        android:textColor="#31274f"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
