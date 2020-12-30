@@ -123,19 +123,49 @@
 
     </EditText>
 
-    <TextView
-        android:id="@+id/textView"
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="Payment Method"
-        android:textSize="17dp"
         android:gravity="center_vertical"
-        android:background="@drawable/forget"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:layout_marginTop="15dp">
+        android:layout_marginTop="15dp"
+        android:textColor="#31274f"
+        android:textStyle="bold"></EditText>
 
-    </TextView>
+    <RadioGroup
+        android:id="@+id/G1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textStyle="bold"
+                android:textColor="#31274f"
+                android:text="Offline/Cash On Dilivery"/>
+
+
+
+           <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+               android:layout_marginLeft="30dp"
+               android:layout_marginRight="30dp"
+               android:textStyle="bold"
+               android:textColor="#31274f"
+                android:text="Online"/>
+
+
+
+    </RadioGroup>
 
     <Button
         android:id="@+id/py"
@@ -148,6 +178,8 @@
         android:textColor="#fff">
 
     </Button>
+
+
 
 
 </LinearLayout>

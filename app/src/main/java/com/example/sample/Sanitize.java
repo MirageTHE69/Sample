@@ -6,6 +6,8 @@ import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.razorpay.Checkout;
@@ -18,10 +20,19 @@ public class Sanitize extends AppCompatActivity implements PaymentResultListener
 
     Button py;
 
+    RadioButton R1,R2;
+    RadioGroup G1;
+
     @Override
+
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sanitize);
+
+        G1 = (RadioGroup) findViewById(R.id.G1);
+
 
         py = findViewById(R.id.py);
 
@@ -32,6 +43,16 @@ public class Sanitize extends AppCompatActivity implements PaymentResultListener
         py.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                int radioButtonID = G1.getCheckedRadioButtonId();
+
+                RadioButton radioButton = (RadioButton) G1.findViewById(radioButtonID);
+
+                String selectedText = (String) radioButton.getText();
+
+                if (selectedText.equals("Online"))
+                {
+
+
 
                 Checkout checkout = new Checkout();
 
@@ -55,6 +76,12 @@ public class Sanitize extends AppCompatActivity implements PaymentResultListener
                 }
 
             }
+                else
+                {
+
+                }
+
+            }
         });
     }
 
@@ -72,6 +99,7 @@ public class Sanitize extends AppCompatActivity implements PaymentResultListener
 
         Toast.makeText(getApplicationContext()
                 ,s,Toast.LENGTH_SHORT).show();
+
 
     }
 }
