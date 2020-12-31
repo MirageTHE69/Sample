@@ -20,9 +20,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Register extends AppCompatActivity {
+private FirebaseAuth mAuth;
 
      EditText FullName,PhoneNo,Email_id,Password,CPassword;
-     FirebaseAuth fAuth;
      Button SignUp;
      TextView Login;
      ProgressBar Progress;
@@ -34,16 +34,16 @@ public class Register extends AppCompatActivity {
 
         FullName=findViewById(R.id.editTextName);
         PhoneNo=findViewById(R.id.editTextPhone);
-        Email_id=findViewById(R.id.editTextTextEmailAddress2);
+        Email_id=findViewById(R.id.editTextTextEmailAddress);
         Password=findViewById(R.id.editText);
         CPassword=findViewById(R.id.editText2);
-        fAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
         Progress=findViewById(R.id.progressBar2);
 
         SignUp=findViewById(R.id.Home2);
 
 
-        if (fAuth.getCurrentUser() != null){
+        if (mAuth.getCurrentUser() != null){
             startActivity(new Intent(getApplicationContext(),Home_Page.class));
             finish();
         }
@@ -56,6 +56,8 @@ public class Register extends AppCompatActivity {
                 String phoneno = PhoneNo.getText().toString().trim();
                 String email = Email_id.getText().toString().trim();
                 String password = Password.getText().toString().trim();
+                String cpassword =CPassword.getText().toString().trim();
+
 
                 if(TextUtils.isEmpty(name)){
                     FullName.setError("Name Is Required. ");
@@ -67,7 +69,12 @@ public class Register extends AppCompatActivity {
                     return;
                 }
 
-                if(phoneno.length() >= 10){
+                if(phoneno.length() > 10){
+                    PhoneNo.setError("Enter A Valid Phone No. ");
+                    return;
+                }
+
+                if(phoneno.length() <10){
                     PhoneNo.setError("Enter A Valid Phone No. ");
                     return;
                 }
@@ -87,15 +94,19 @@ public class Register extends AppCompatActivity {
                     return;
                 }
 
-                Progress.setVisibility(View.VISIBLE);
+                /*if(cpassword.equals(password)){
+                    CPassword.setError("Your Password Is Not Same ");
+                    return;
+                }
+                Progress.setVisibility(View.VISIBLE);*/
 
                 //Register User In FireBase
 
-                fAuth.createUserWithEmailAndPassword("email","password").addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
-                            Toast.makeText(Register.this, "User Created", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Register.this, "Registration Successfull. ", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(),Home_Page.class));
 
                         }else{

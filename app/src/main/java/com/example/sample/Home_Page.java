@@ -7,9 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Home_Page extends AppCompatActivity {
 
-    Button B1,B2,B3,B4;
+    Button B1,B2,B3,B4,B5;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +52,16 @@ public class Home_Page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), Sanitize.class));
+            }
+        });
+
+        B5=findViewById(R.id.button2);
+        B5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                finish();
             }
         });
 
