@@ -24,11 +24,6 @@ public class NextActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_next);
 
-        Login_Db = new Login_Db(this).getWritableDatabase();
-
-        User_Name=findViewById(R.id.LogUser);
-        Password=findViewById(R.id.LogPass);
-
         Signin=findViewById(R.id.Home1);
         Signin.setOnClickListener(new View.OnClickListener() {
             @Override
