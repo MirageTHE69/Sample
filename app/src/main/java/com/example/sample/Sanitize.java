@@ -6,6 +6,7 @@ import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -19,7 +20,7 @@ import org.json.JSONObject;
 public class Sanitize extends AppCompatActivity implements PaymentResultListener {
 
     Button py;
-
+    EditText UserName,PhoneNo,EnterDate,Address,City,PinCode;
     RadioButton R1,R2;
     RadioGroup G1;
 
@@ -31,13 +32,20 @@ public class Sanitize extends AppCompatActivity implements PaymentResultListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sanitize);
 
+        UserName = findViewById(R.id.editTextTextPersonName3);
+        PhoneNo =  findViewById(R.id.editTextNumberDecimal);
+        EnterDate =findViewById(R.id.editTextDate);
+        Address =  findViewById(R.id.editTextTextPostalAddress);
+        City =     findViewById(R.id.editTextTextPersonName);
+        PinCode =  findViewById(R.id.editTextNumber);
+
+        R1=findViewById(R.id.radio1);
+        R2=findViewById(R.id.radio2);
+
         G1 = (RadioGroup) findViewById(R.id.G1);
 
-
         py = findViewById(R.id.py);
-
         String sAmount = "100";
-
         final int amount = Math.round(Float.parseFloat(sAmount)*100);
 
         py.setOnClickListener(new View.OnClickListener() {
@@ -51,8 +59,6 @@ public class Sanitize extends AppCompatActivity implements PaymentResultListener
 
                 if (selectedText.equals("Online"))
                 {
-
-
 
                 Checkout checkout = new Checkout();
 
