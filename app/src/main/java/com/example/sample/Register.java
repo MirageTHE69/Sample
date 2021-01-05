@@ -97,8 +97,9 @@ private FirebaseAuth mAuth;
                 /*if(cpassword.equals(password)){
                     CPassword.setError("Your Password Is Not Same ");
                     return;
-                }
-                Progress.setVisibility(View.VISIBLE);*/
+                }*/
+
+                Progress.setVisibility(View.VISIBLE);
 
                 //Register User In FireBase
 
