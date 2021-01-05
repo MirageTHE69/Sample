@@ -17,10 +17,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.razorpay.Checkout;
@@ -66,7 +64,8 @@ public class Sanitize extends AppCompatActivity implements PaymentResultListener
         String sAmount = "100";
         final int amount = Math.round(Float.parseFloat(sAmount)*100);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (checkSelfPermission(Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED) {
+
+             if (checkSelfPermission(Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED) {
 
             } else {
                 requestPermissions(new String[]{Manifest.permission.SEND_SMS}, 1);
