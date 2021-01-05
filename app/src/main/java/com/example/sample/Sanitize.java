@@ -2,7 +2,6 @@ package com.example.sample;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.Manifest;
 import android.app.AlertDialog;
 import android.content.Intent;
